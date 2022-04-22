@@ -87,6 +87,13 @@
 /* #include <dmalloc.h> */
 #endif
 
+#ifdef __APPLE__
+/* whence values for lseek(2) */
+#define    SEEK_SET    0    /* set file offset to offset */
+#define    SEEK_CUR    1    /* set file offset to current plus offset */
+#define    SEEK_END    2    /* set file offset to EOF plus offset */
+#endif
+
 /* includes/defines for threading, if using them */
 #ifdef CHM_MT
 #ifdef WIN32
